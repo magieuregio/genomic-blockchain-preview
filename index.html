@@ -13,7 +13,6 @@
         .font-mono { font-family: 'Source Code Pro', monospace; }
         .architecture-box { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; cursor: pointer; }
         .architecture-box:hover, .architecture-box.active { transform: translateY(-5px) scale(1.02); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); border-color: #2563eb; }
-        .connector { position: absolute; background-color: #d1d5db; z-index: -1; }
         .flow-step { transition: border-color 0.3s ease, background-color 0.3s ease; }
         .flow-step.active { border-color: #2563eb; background-color: #dbeafe; }
         .table-container::-webkit-scrollbar { display: none; }
@@ -34,9 +33,8 @@
             </div>
         </nav>
     </header>
-
     <main class="container mx-auto px-6 py-8 md:py-12">
-
+        <!-- Abstract -->
         <section id="abstract" class="text-center mb-16 md:mb-24">
             <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Blockchain and Genomics: An Infrastructure for Secure Storage and Access of Genetic Data</h1>
             <p class="text-lg text-slate-600 mb-2">Company: Magi's Lab Srl</p>
@@ -50,196 +48,162 @@
                 </p>
             </div>
         </section>
-
+        <!-- Problem -->
         <section id="problem" class="mb-16 md:mb-24 scroll-mt-20">
             <div class="text-center mb-10">
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900">The Challenge of Genomic Data</h2>
-                <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">
-                    The massive amount of genomic data generated has outpaced traditional infrastructure capabilities, creating several critical challenges. This section highlights the key issues the proposed infrastructure aims to address.
-                </p>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">The massive amount of genomic data generated has outpaced traditional infrastructure capabilities, creating several critical challenges. This section highlights the key issues the proposed infrastructure aims to address.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="font-bold text-lg mb-2 text-red-600">Storage & Scalability</h3>
-                    <p class="text-sm text-slate-600">Storing massive datasets requires expensive infrastructure. Centralized databases are vulnerable to single points of failure, risking data loss.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="font-bold text-lg mb-2 text-red-600">Privacy & Security</h3>
-                    <p class="text-sm text-slate-600">Genomic data are highly sensitive and personal. Centralized systems face risks of data breaches, unauthorized access, and censorship, threatening privacy.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="font-bold text-lg mb-2 text-red-600">Integrity & Traceability</h3>
-                    <p class="text-sm text-slate-600">Ensuring data remain unaltered and maintaining a transparent, verifiable usage trail is complex in conventional systems.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <h3 class="font-bold text-lg mb-2 text-red-600">Data Silos & Interoperability</h3>
-                    <p class="text-sm text-slate-600">Valuable datasets often remain isolated within institutional boundaries, hindering collaboration.</p>
-                </div>
+                <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-bold text-lg mb-2 text-red-600">Storage & Scalability</h3><p class="text-sm">Storing massive datasets requires expensive infrastructure. Centralized databases are vulnerable to single points of failure, risking data loss.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-bold text-lg mb-2 text-red-600">Privacy & Security</h3><p class="text-sm">Genomic data are highly sensitive and personal. Centralized systems face risks of data breaches, unauthorized access, and censorship.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-bold text-lg mb-2 text-red-600">Integrity & Traceability</h3><p class="text-sm">Ensuring data remain unaltered and maintaining a transparent, verifiable usage trail is complex.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow"><h3 class="font-bold text-lg mb-2 text-red-600">Data Silos & Interoperability</h3><p class="text-sm">Valuable datasets often remain isolated within institutional boundaries, hindering collaboration.</p></div>
             </div>
         </section>
-
+        <!-- Solution -->
         <section id="solution" class="mb-16 md:mb-24 scroll-mt-20">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900">The Solution: An Interactive Architecture</h2>
-                <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">
-                    The proposed infrastructure is a multi-layered system combining cutting-edge technologies. Click on each component below to explore its role and functionality.
-                </p>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">The proposed infrastructure is a multi-layered system combining cutting-edge technologies. Click on each component below to explore its role and functionality.</p>
             </div>
             <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
-                <div id="architecture-diagram" class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12 items-center text-center">
-                    <div data-target="desc-vectorization" class="architecture-box border-2 border-slate-300 p-4 rounded-lg">
-                        <h4 class="font-bold text-teal-700">1. Data Vectorization</h4>
-                        <p class="text-xs text-slate-500">Preprocessing</p>
-                    </div>
-                    <div data-target="desc-ipfs" class="architecture-box border-2 border-slate-300 p-4 rounded-lg">
-                        <h4 class="font-bold text-teal-700">2. IPFS Storage</h4>
-                        <p class="text-xs text-slate-500">Decentralized Storage</p>
-                    </div>
-                    <div data-target="desc-polygon" class="architecture-box border-2 border-slate-300 p-4 rounded-lg">
-                        <h4 class="font-bold text-teal-700">3. Polygon Blockchain</h4>
-                        <p class="text-xs text-slate-500">Control Layer</p>
-                    </div>
-                    <div data-target="desc-nft" class="architecture-box border-2 border-slate-300 p-4 rounded-lg">
-                        <h4 class="font-bold text-indigo-700">4. NFT & MAG Token</h4>
-                        <p class="text-xs text-slate-500">Access Control</p>
-                    </div>
-                    <div data-target="desc-web3ui" class="architecture-box border-2 border-slate-300 p-4 rounded-lg">
-                        <h4 class="font-bold text-indigo-700">5. Web3 Interface</h4>
-                        <p class="text-xs text-slate-500">User Access</p>
-                    </div>
-                    <div data-target="desc-analysis" class="architecture-box border-2 border-slate-300 p-4 rounded-lg">
-                        <h4 class="font-bold text-indigo-700">6. Analysis Tools</h4>
-                        <p class="text-xs text-slate-500">Python/ML Suite</p>
-                    </div>
+                <div id="architecture-diagram" class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div data-target="desc-vectorization" class="architecture-box border p-4 rounded-lg"><h4 class="font-bold text-teal-700">1. Data Vectorization</h4><p class="text-xs">Preprocessing</p></div>
+                    <div data-target="desc-ipfs" class="architecture-box border p-4 rounded-lg"><h4 class="font-bold text-teal-700">2. IPFS Storage</h4><p class="text-xs">Decentralized Storage</p></div>
+                    <div data-target="desc-polygon" class="architecture-box border p-4 rounded-lg"><h4 class="font-bold text-teal-700">3. Polygon Blockchain</h4><p class="text-xs">Control Layer</p></div>
+                    <div data-target="desc-nft" class="architecture-box border p-4 rounded-lg"><h4 class="font-bold text-indigo-700">4. NFT & MAG Token</h4><p class="text-xs">Access Control</p></div>
+                    <div data-target="desc-web3ui" class="architecture-box border p-4 rounded-lg"><h4 class="font-bold text-indigo-700">5. Web3 Interface</h4><p class="text-xs">User Access</p></div>
+                    <div data-target="desc-analysis" class="architecture-box border p-4 rounded-lg"><h4 class="font-bold text-indigo-700">6. Analysis Tools</h4><p class="text-xs">Python/ML Suite</p></div>
                 </div>
-                <div id="architecture-descriptions" class="mt-8 pt-6 border-t border-slate-200">
+                <div id="architecture-descriptions" class="mt-6 pt-4 border-t text-left text-slate-700">
                     <div id="desc-default" class="text-center text-slate-500">Select a component to view details.</div>
-
-                    <div id="desc-vectorization" class="hidden architecture-desc text-left text-slate-700 leading-relaxed text-sm">
-                        <h3 class="font-bold text-lg mb-2">Genomic Data Vectorization</h3>
-                        <p>Raw genomic files (e.g., VCF, FASTQ) are large and unsuitable for direct decentralized storage or ML pipelines. Vectorization transforms sequences into numerical embeddings, reducing size and enabling efficient ML workflows.</p>
-                    </div>
-                    <div id="desc-ipfs" class="hidden architecture-desc text-left text-slate-700 leading-relaxed text-sm">
-                        <h3 class="font-bold text-lg mb-2">Decentralized Storage: IPFS</h3>
-                        <p>IPFS uses content-based addressing via CIDs, ensuring data integrity. Pinning pins data on nodes for persistence, avoiding single points of failure associated with location-based URLs.</p>
-                    </div>
-                    <div id="desc-polygon" class="hidden architecture-desc text-left text-slate-700 leading-relaxed text-sm">
-                        <h3 class="font-bold text-lg mb-2">Layer 2 Blockchain: Polygon Testnet</h3>
-                        <p>Polygon provides fast, low-cost transactions and EVM compatibility for Solidity contracts. On testnet, it supports prototyping without real costs.</p>
-                    </div>
-                    <div id="desc-nft" class="hidden architecture-desc text-left text-slate-700 leading-relaxed text-sm">
-                        <h3 class="font-bold text-lg mb-2">Access Control: Multi-NFT & MAG Token</h3>
-                        <p>ERC-1155 NFTs encode dataset access rights; MAG ERC-20 tokens (free via faucet) enable NFT claims. Ownership proves access, enforced on-chain.</p>
-                    </div>
-                    <div id="desc-web3ui" class="hidden architecture-desc text-left text-slate-700 leading-relaxed text-sm">
-                        <h3 class="font-bold text-lg mb-2">Web3 User Interface</h3>
-                        <p>A React/Ethers.js UI connects wallets via MetaMask, lets users claim MAG, mint NFTs, and retrieve IPFS CIDs for data download.</p>
-                    </div>
-                    <div id="desc-analysis" class="hidden architecture-desc text-left text-slate-700 leading-relaxed text-sm">
-                        <h3 class="font-bold text-lg mb-2">Analysis Tools Integration</h3>
-                        <p>Vectorized data fetched from IPFS load directly into Python environments using BioPython, NumPy, scikit-learn, and TensorFlow for downstream ML and bioinformatics.</p>
-                    </div>
+                    <div id="desc-vectorization" class="hidden architecture-desc"><h3 class="font-bold mb-2">Genomic Data Vectorization</h3><p>Raw genomic files (VCF, FASTQ) are large; vectorization converts sequences into numerical embeddings for efficient storage and machine-learning workflows.</p></div>
+                    <div id="desc-ipfs" class="hidden architecture-desc"><h3 class="font-bold mb-2">Decentralized Storage: IPFS</h3><p>IPFS uses content-based addressing (CIDs) and pinning to ensure data integrity and availability, removing single points of failure.</p></div>
+                    <div id="desc-polygon" class="hidden architecture-desc"><h3 class="font-bold mb-2">Layer 2 Blockchain: Polygon Testnet</h3><p>Polygon offers fast, low-cost transactions and EVM compatibility for Solidity smart contracts, ideal for prototyping on testnet.</p></div>
+                    <div id="desc-nft" class="hidden architecture-desc"><h3 class="font-bold mb-2">Access Control: Multi-NFT & MAG Token</h3><p>ERC-1155 NFTs encode dataset access rights; MAG ERC-20 tokens (free via faucet) permit NFT claims, with on-chain verification of ownership.</p></div>
+                    <div id="desc-web3ui" class="hidden architecture-desc"><h3 class="font-bold mb-2">Web3 User Interface</h3><p>The UI built with React/Ethers.js integrates MetaMask for authentication, letting users claim MAG, mint NFTs, and retrieve IPFS CIDs.</p></div>
+                    <div id="desc-analysis" class="hidden architecture-desc"><h3 class="font-bold mb-2">Analysis Tools Integration</h3><p>Vectorized data from IPFS can be loaded directly into Python (BioPython, NumPy, scikit-learn, TensorFlow) for downstream ML analyses.</p></div>
                 </div>
             </div>
         </section>
-
+        <!-- Workflows -->
         <section id="workflows" class="mb-16 md:mb-24 scroll-mt-20">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Interactive Workflows</h2>
                 <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">Explore the key processes step by step. These diagrams simplify data storage and smart contract interaction flows.</p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Workflow 1 -->
                 <div class="bg-white p-6 rounded-xl shadow-lg">
-                    <h3 class="font-bold text-xl mb-4 text-center">Workflow 1: Vectorization & Storage</h3>
+                    <h3 class="text-xl font-bold text-center mb-4">Workflow 1: Vectorization & Storage</h3>
                     <div id="storage-flow" class="space-y-2">
-                        <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="1"><strong>Step 1:</strong> Raw Genomic Data (VCF, FASTQ)</div>
+                        <div class="flow-step border p-3 rounded" data-step="1"><strong>Step 1:</strong> Raw Genomic Data (VCF, FASTQ)</div>
                         <div class="text-center text-gray-400">↓</div>
-                        <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="2"><strong>Step 2:</strong> Vectorization Algorithms (e.g., k-mer)</div>
+                        <div class="flow-step border p-3 rounded" data-step="2"><strong>Step 2:</strong> Vectorization Algorithms (e.g., k-mer)</div>
                         <div class="text-center text-gray-400">↓</div>
-                        <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="3"><strong>Step 3:</strong> Vectorized Data (NumPy arrays)</div>
+                        <div class="flow-step border p-3 rounded" data-step="3"><strong>Step 3:</strong> Vectorized Data (NumPy arrays)</div>
                         <div class="text-center text-gray-400">↓</div>
-                        <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="4"><strong>Step 4:</strong> Upload to IPFS Node</div>
+                        <div class="flow-step border p-3 rounded" data-step="4"><strong>Step 4:</strong> Upload to IPFS Node</div>
                         <div class="text-center text-gray-400">↓</div>
-                        <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="5"><strong>Step 5:</strong> Obtain Content Identifier (CID)</div>
+                        <div class="flow-step border p-3 rounded" data-step="5"><strong>Step 5:</strong> Obtain Content Identifier (CID)</div>
                         <div class="text-center text-gray-400">↓</div>
-                        <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="6"><strong>Step 6:</strong> Pinning for Persistence</div>
+                        <div class="flow-step border p-3 rounded" data-step="6"><strong>Step 6:</strong> Pinning for Persistence</div>
                     </div>
-                    <div id="storage-flow-desc" class="mt-4 p-4 bg-slate-100 rounded-md text-sm text-slate-700 min-h-[50px]">Start at Step 1.</div>
-                    <div class="flex justify-center mt-4 space-x-4">
-                        <button id="storage-prev" class="px-4 py-2 bg-slate-200 rounded-md text-sm font-semibold hover:bg-slate-300 disabled:opacity-50" disabled>Previous</button>
-                        <button id="storage-next" class="px-4 py-2 bg-blue-500 text-white rounded-md text-sm font-semibold hover:bg-blue-600">Next</button>
-                    </div>
+                    <div id="storage-flow-desc" class="mt-4 p-4 bg-slate-100 rounded text-sm text-slate-700">Start at Step 1.</div>
+                    <div class="flex justify-center mt-4 space-x-4">                    <button id="storage-prev" class="bg-slate-200 px-4 py-2 rounded disabled:opacity-50" disabled>Previous</button>                    <button id="storage-next" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Next</button>                    </div>
                 </div>
+                <!-- Workflow 2 -->
                 <div class="bg-white p-6 rounded-xl shadow-lg">
-                    <h3 class="font-bold text-xl mb-4 text-center">Workflow 2: User Interaction</h3>
+                    <h3 class="text-xl font-bold text-center mb-4">Workflow 2: User Interaction</h3>
                     <div id="user-flow" class="space-y-2">
-                        <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="1"><strong>Step 1:</strong> Admin mints NFT tied to CID</div>
+                        <div class="flow-step border p-3 rounded" data-step="1"><strong>Step 1:</strong> Admin mints NFT tied to CID</div>
                         <div class="text-center text-gray-400">↓</div>
-                        <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="2"><strong>Step 2:</strong> User requests free MAG tokens (faucet)</div>
+                        <div class="flow-step border p-3 rounded" data-step="2"><strong>Step 2:</strong> User requests free MAG tokens (faucet)</div>
                         <div class="text-center text-gray-400">↓</div>
-                        <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="3"><strong>Step 3:</strong> User claims NFT with MAG</div>
-                        <div class="text-center text-gray-400">↓</div>
-                        <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="4"><strong>Step 4:</strong> User requests data via NFT</div>
-                        <div class="text-center text-gray-400">↓</div>
-                        <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="5"><strong>Step 5:</strong> Smart contract verifies ownership</div>
-                        <div class="text-center text-gray-400">↓</div>
-                        <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="6"><strong>Step 6:</strong> Events emitted for auditing</div>
+                        <div class="flow-step border p-3 rounded" data-step="3"><strong>Step 3:</strong> User claims NFT with MAG</div>
+                        <div class="text-center text-gray-400">↓</div>                        <div class="flow-step border p-3 rounded" data-step="4"><strong>Step 4:</strong> User requests data via NFT</div>
+                        <div class="text-center text-gray-400">↓</div>                        <div class="flow-step border p-3 rounded" data-step="5"><strong>Step 5:</strong> Smart contract verifies ownership</div>
+                        <div class="text-center text-gray-400">↓</div>                        <div class="flow-step border p-3 rounded" data-step="6"><strong>Step 6:</strong> Events emitted for auditing</div>
                     </div>
-                    <div id="user-flow-desc" class="mt-4 p-4 bg-slate-100 rounded-md text-sm text-slate-700 min-h-[50px]">Start at Step 1.</div>
-                    <div class="flex justify-center mt-4 space-x-4">
-                        <button id="user-prev" class="px-4 py-2 bg-slate-200 rounded-md text-sm font-semibold hover:bg-slate-300 disabled:opacity-50" disabled>Previous</button>
-                        <button id="user-next" class="px-4 py-2 bg-blue-500 text-white rounded-md text-sm font-semibold hover:bg-blue-600">Next</button>
-                    </div>
+                    <div id="user-flow-desc" class="mt-4 p-4 bg-slate-100 rounded text-sm text-slate-700">Start at Step 1.</div>
+                    <div class="flex justify-center mt-4 space-x-4">                    <button id="user-prev" class="bg-slate-200 px-4 py-2 rounded disabled:opacity-50" disabled>Previous</button>                    <button id="user-next" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Next</button>                    </div>
                 </div>
             </div>
         </section>
-
+        <!-- Comparison -->
         <section id="comparison" class="mb-16 md:mb-24 scroll-mt-20">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Comparative Analysis</h2>
-                <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">This table compares the proposed infrastructure with traditional centralized systems and other genomics blockchain projects, highlighting key advantages.</p>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <div class="text-center mb-10"><h2 class="text-3xl md:text-4xl font-bold text-slate-900">Comparative Analysis</h2><p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">This table compares the proposed infrastructure with traditional centralized systems and other genomics blockchain projects, highlighting key advantages.</p></div>
+            <div class="bg-white rounded-xl shadow overflow-hidden">
                 <div class="table-container overflow-x-auto">
-                    <table class="w-full text-sm text-left">
-                        <thead class="bg-slate-100 text-slate-600 uppercase">
-                            <tr>
-                                <th class="px-6 py-3">Feature</th>
-                                <th class="px-6 py-3">Traditional Centralized</th>
-                                <th class="px-6 py-3">Other Blockchain Projects</th>
-                                <th class="px-6 py-3 font-bold text-blue-600">Proposed Infrastructure</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-200">
-                            <tr class="hover:bg-slate-50">
-                                <td class="px-6 py-4 font-medium">Storage Model</td>
-                                <td class="px-6 py-4">Centralized servers/databases</td>
-                                <td class="px-6 py-4">Off-chain storage with on-chain hashes</td>
-                                <td class="px-6 py-4 font-medium">Embeddings on pinned IPFS; CIDs linked via NFTs on Polygon L2</td>
-                            </tr>
-                            <tr class="hover:bg-slate-50">
-                                <td class="px-6 py-4 font-medium">Access Control</td>
-                                <td class="px-6 py-4">Accounts/passwords/RBAC</td>
-                                <td class="px-6 py-4">Token-gated smart contracts</td>
-                                <td class="px-6 py-4 font-medium">Multi-NFT (ERC-1155) with free MAG token; on-chain verification</td>
-                            </tr>
-                            <tr class="hover:bg-slate-50">
-                                <td class="px-6 py-4 font-medium">Traceability</td>
-                                <td class="px-6 py-4">Mutable centralized logs</td>
-                                <td class="px-6 py-4">Immutable blockchain audit trail</td>
-                                <td class="px-6 py-4 font-medium">Full event logging on Polygon</td>
-                            </tr>
-                            <tr class="hover:bg-slate-50">
-                                <td class="px-6 py-4 font-medium">Data Integrity</td>
-                                <td class="px-6 py-4">DB backups and checks</td>
-                                <td class="px-6 py-4">On-chain CID hashes ensure off-chain integrity</td>
-                                <td class="px-6 py-4 font-medium">Content-based IPFS addressing prevents tampering</td>
-                            </tr>
-                            <tr class="hover:bg-slate-50">
-                                <td class="px-6 py-4 font-medium">User Costs</td>
-                                <td class="px-6 py-4">Licenses and hosting fees</td>
-                                <td class="px-6 py-4">High L1 gas fees</td>
-                                <td class="px-6 py-4 font-medium">Testnet MAG/NFT free; IPFS low-cost storage</td>
-                            </tr>
-                            <tr class="hover:bg-slate-50">
-                                <td class="px-6 py
+                    <table class="w-full text-sm text-left"><thead class="bg-slate-100 text-slate-600 uppercase"><tr><th class="px-6 py-3">Feature</th><th class="px-6 py-3">Traditional Centralized</th><th class="px-6 py-3">Other Blockchain Projects</th><th class="px-6 py-3 font-bold text-blue-600">Proposed Infrastructure</th></tr></thead><tbody class="divide-y divide-slate-200">
+                        <tr class="hover:bg-slate-50"><td class="px-6 py-4 font-medium">Storage Model</td><td class="px-6 py-4">Central servers/databases</td><td class="px-6 py-4">Off-chain storage with on-chain hashes</td><td class="px-6 py-4 font-medium">Embeddings on pinned IPFS; CIDs linked via NFTs on Polygon L2</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-6 py-4 font-medium">Access Control</td><td class="px-6 py-4">Accounts/passwords/RBAC</td><td class="px-6 py-4">Token-gated smart contracts</td><td class="px-6 py-4 font-medium">Multi-NFT (ERC-1155) with free MAG token; on-chain verification</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-6 py-4 font-medium">Traceability</td><td class="px-6 py-4">Mutable centralized logs</td><td class="px-6 py-4">Immutable blockchain audit trail</td><td class="px-6 py-4 font-medium">Full event logging on Polygon</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-6 py-4 font-medium">Data Integrity</td><td class="px-6 py-4">DB backups and checks</td><td class="px-6 py-4">On-chain CID hashes ensure off-chain integrity</td><td class="px-6 py-4 font-medium">Content-based IPFS addressing prevents tampering</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-6 py-4 font-medium">User Costs</td><td class="px-6 py-4">Licenses and hosting fees</td><td class="px-6 py-4">High Layer 1 gas fees</td><td class="px-6 py-4 font-medium">Testnet MAG/NFT free; IPFS storage low-cost</td></tr>
+                        <tr class="hover:bg-slate-50"><td class="px-6 py-4 font-medium">Tool Integration</td><td class="px-6 py-4">API/database access</td><td class="px-6 py-4">Varies by project</td><td class="px-6 py-4 font-medium">Native Python/ML integration (BioPython, TensorFlow)</td></tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </section>
+        <!-- Benefits -->
+        <section id="advantages" class="mb-16 md:mb-24 scroll-mt-20">
+            <div class="text-center mb-10"><h2 class="text-3xl md:text-4xl font-bold text-slate-900">Key Benefits and Applications</h2><p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">This system offers unique advantages and supports FAIR data principles, unlocking innovative research applications.</p></div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div><h3 class="font-bold text-xl mb-4">Core Strengths</h3><ul class="space-y-4">
+                    <li class="bg-white p-4 rounded shadow-sm"><h4 class="font-semibold">Efficient Data Vectorization</h4><p class="text-sm">Prepares data for decentralized storage and immediate ML/AI application.</p></li>
+                    <li class="bg-white p-4 rounded shadow-sm"><h4 class="font-semibold">Scalable Layer 2 NFTs</h4><p class="text-sm">ERC-1155 on Polygon L2 ensures low-cost, granular access control.</p></li>
+                    <li class="bg-white p-4 rounded shadow-sm"><h4 class="font-semibold">Free Utility Token (MAG)</h4><p class="text-sm">Removes financial barriers for researchers to claim access NFTs.</p></li>
+                    <li class="bg-white p-4 rounded shadow-sm"><h4 class="font-semibold">FAIR Data Support</h4><p class="text-sm">Ensures data are Findable, Accessible, Interoperable, Reusable.</p></li>
+                </ul></div>
+                <div><h3 class="font-bold text-xl mb-4">Potential Applications</h3><ul class="space-y-4">
+                    <li class="bg-white p-4 rounded shadow-sm"><h4 class="font-semibold">Secure Collaborative Research</h4><p class="text-sm">Institutions share genomic datasets with verifiable access control.</p></li>
+                    <li class="bg-white p-4 rounded shadow-sm"><h4 class="font-semibold">Decentralized Data Commons</h4><p class="text-sm">Community-governed repositories where contributors maintain data sovereignty.</p></li>
+                    <li class="bg-white p-4 rounded shadow-sm"><h4 class="font-semibold">Individual Data Sovereignty</h4><p class="text-sm">Users manage permissions for their genetic data on a case-by-case basis.</p></li>
+                    <li class="bg-white p-4 rounded shadow-sm"><h4 class="font-semibold">Verifiable Clinical Trials</h4><p class="text-sm">Transparent data access management for genomics in clinical studies.</p></li>
+                </ul></div>
+            </div>
+        </section>
+        <!-- Conclusion -->
+        <section id="conclusion" class="scroll-mt-20 mb-16 md:mb-24">
+            <div class="text-center mb-10"><h2 class="text-3xl md:text-4xl font-bold text-slate-900">Conclusions & Future Perspectives</h2></div>
+            <div class="bg-white p-8 rounded-xl shadow-lg"><p class="text-slate-700 leading-relaxed mb-6">This study presented an innovative blockchain-based infrastructure for secure storage and controlled access to genomic data. We successfully integrated data vectorization, decentralized IPFS storage, and multi-NFT (ERC-1155) access control on Polygon L2. Key outcomes include enhanced data preservation and integrity, comprehensive audit trails, and improved researcher usability through Python tool integration. This methodology holds significant potential as a global reference, fostering ethical, collaborative scientific discovery in line with DeSci principles.</p>
+                <div class="pt-6 border-t"><h4 class="font-bold text-lg mb-3">Future Developments</h4><ul class="list-disc list-inside space-y-2 text-sm text-slate-600">
+                        <li><strong>Mainnet Migration:</strong> Deploy on Polygon mainnet after rigorous security audits.</li>
+                        <li><strong>Privacy Technologies (PETs):</strong> Integrate zero-knowledge proofs or homomorphic encryption for enhanced privacy.</li>
+                        <li><strong>Data Governance Models:</strong> Develop comprehensive frameworks for real-world implementation.</li>
+                        <li><strong>Expanded MAG Utility:</strong> Explore governance and staking mechanisms for MAG token.</li>
+                    </ul>
+                <div class="mt-6 text-center"><a href="https://github.com/MaggiGroup/GenomicBlockchainInfra_SmartContracts_V1" target="_blank" rel="noopener noreferrer" class="inline-block bg-slate-800 text-white font-bold px-6 py-3 rounded hover:bg-slate-900">View Smart Contracts on GitHub</a></div>
+            </div>
+        </section>
+    </main>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Interactive Architecture Logic
+        const boxes = document.querySelectorAll('.architecture-box');
+        const descs = document.querySelectorAll('.architecture-desc');
+        const defaultDesc = document.getElementById('desc-default');
+        boxes.forEach(box => box.addEventListener('click', () => {
+            boxes.forEach(b => b.classList.remove('active'));
+            descs.forEach(d => d.classList.add('hidden'));
+            defaultDesc.classList.add('hidden');
+            box.classList.add('active');
+            document.getElementById(box.dataset.target).classList.remove('hidden');
+        }));
+        // Workflow Logic
+        function setup(flow) {
+            const steps = document.querySelectorAll(`#${flow}-flow .flow-step`);
+            const desc = document.getElementById(`${flow}-desc`);
+            let idx=0; const total=steps.length;
+            document.getElementById(`${flow}-next`).addEventListener('click', ()=>{ if(idx<total-1){ idx++; update(); }});
+            document.getElementById(`${flow}-prev`).addEventListener('click', ()=>{ if(idx>0){ idx--; update(); }});
+            function update(){ steps.forEach((s,i)=>s.classList.toggle('active', i===idx)); desc.textContent = steps[idx].textContent; document.getElementById(`${flow}-prev`).disabled=idx===0; document.getElementById(`${flow}-next`).disabled=idx===total-1; }
+            update();
+        }
+        setup('storage'); setup('user');
+    });
+    </script>
+</body>
+</html>
