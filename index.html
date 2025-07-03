@@ -1,167 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Genomic Blockchain Infrastructure</title>
-<style>
-  body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; max-width: 800px; }
-  h1, h2, h3 { color: #2c3e50; }
-  ul { margin-left: 20px; }
-  li { margin: 5px 0; }
-  .arch-list li { cursor: pointer; color: #2980b9; }
-  .arch-list li:hover { text-decoration: underline; }
-  #arch-desc { border:1px solid #ccc; padding:10px; margin-top:10px; background-color: #f9f9f9; }
-  table { border-collapse: collapse; width: 100%; }
-  th, td { border: 1px solid #ccc; padding: 8px; }
-  th { background-color: #ecf0f1; }
-  button { margin-top: 10px; padding: 5px 10px; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Report: Blockchain and Genomics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .font-mono { font-family: 'Source Code Pro', monospace; }
+    .architecture-box { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; cursor: pointer; }
+    .architecture-box:hover, .architecture-box.active { transform: translateY(-5px) scale(1.02); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1); border-color: #2563eb; }
+    .flow-step { transition: border-color 0.3s ease, background-color 0.3s ease; }
+    .flow-step.active { border-color: #2563eb; background-color: #dbeafe; }
+    .table-container::-webkit-scrollbar { display: none; }
+    .table-container { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800">
 
-<h1>Genomic Blockchain Infrastructure</h1>
+  <!-- Header -->
+  <header class="bg-white/90 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+    <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <div class="text-lg font-bold text-blue-600">Genomic Blockchain Infrastructure</div>
+      <div class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="#problem" class="text-slate-600 hover:text-blue-600">Problem</a>
+        <a href="#solution" class="text-slate-600 hover:text-blue-600">Solution</a>
+        <a href="#workflows" class="text-slate-600 hover:text-blue-600">Workflows</a>
+        <a href="#comparison" class="text-slate-600 hover:text-blue-600">Comparison</a>
+        <a href="#advantages" class="text-slate-600 hover:text-blue-600">Benefits</a>
+        <a href="#conclusion" class="text-slate-600 hover:text-blue-600">Conclusion</a>
+      </div>
+    </nav>
+  </header>
 
-<h2>The Solution: An Interactive Architecture</h2>
-<p>Our proposed architecture leverages blockchain technology to create a robust and user-centered genomic data infrastructure. It consists of several key components, each designed to ensure data integrity, security, and accessibility.</p>
-<ul id="arch-components" class="arch-list">
-    <li data-desc="The <strong>Data Storage Layer</strong> stores encrypted genomic data off-chain in secure databases or distributed storage, while recording references on-chain to ensure integrity.">Data Storage Layer</li>
-    <li data-desc="The <strong>Blockchain Network</strong> connects nodes running the distributed ledger, ensuring an immutable record of genomic data transactions and smart contracts across participants.">Blockchain Network</li>
-    <li data-desc="The <strong>Smart Contracts Engine</strong> encodes consent policies and automates data access permissions, ensuring that only authorized parties can retrieve genomic data according to predefined rules.">Smart Contracts Engine</li>
-    <li data-desc="The <strong>Encryption Module</strong> handles the encryption and decryption of sensitive genomic data using state-of-the-art cryptographic algorithms, preserving privacy both on-chain and off-chain.">Encryption Module</li>
-    <li data-desc="The <strong>User Interface</strong> provides researchers and patients with an intuitive dashboard for data submission, query, and consent management, facilitating interaction with the blockchain system.">User Interface</li>
-    <li data-desc="The <strong>Consensus Mechanism</strong> coordinates distributed agreement on new data entries and transactions, balancing security and performance among network nodes.">Consensus Mechanism</li>
-</ul>
-<div id="arch-desc">Click on a component above to see its description.</div>
+  <!-- Main -->
+  <main class="container mx-auto px-6 py-8 md:py-12">
 
-<h2>Interactive Workflows</h2>
-<p>To illustrate how users interact with our genomic blockchain infrastructure, we present two interactive workflows below: (1) Data Submission Workflow and (2) Data Query Workflow. Click through the steps to explore the processes.</p>
+    <!-- Abstract -->
+    <section id="abstract" class="text-center mb-16 md:mb-24">
+      <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Blockchain and Genomics: Secure Storage & Access Infrastructure</h1>
+      <p class="text-lg text-slate-600 mb-2">Company: Magi's Lab Srl</p>
+      <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md">
+        <h2 class="text-xl font-bold text-left mb-3">Abstract</h2>
+        <p class="text-slate-700 leading-relaxed">
+          Genetics is a fundamental science, and global genomic data has reached terabytes. This exponential growth challenges storage, processing, and integrity. Blockchain combined with IPFS provides traceability and secure storage. We present a multi-layered infrastructure: vectorized data on IPFS, multi-NFT structure on Polygon testnet, Web3 interface, and free MAG utility token. A Solidity smart contract governs access, integrating with Python-based genomics tools. This model can serve as a global reference for genetic research.
+        </p>
+        <p class="mt-4 text-left">
+          <a href="INSERT_ARTICLE_URL" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">Read the full article</a>
+        </p>
+      </div>
+    </section>
 
-<h3>1. Data Submission Workflow</h3>
-<p id="workflow1-step">Step 1: A user (e.g., a patient) collects their genomic data and requests to store it securely, providing consent details for future research usage.</p>
-<button id="workflow1-next">Next</button>
+    <!-- Problem -->
+    <section id="problem" class="mb-16 md:mb-24 scroll-mt-20">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900">The Challenge of Genomic Data</h2>
+        <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">
+          Massive genomic datasets exceed traditional infrastructure capabilities. Key issues include:
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="font-bold text-lg mb-2 text-red-600">Storage & Scalability</h3>
+          <p class="text-sm">Centralized databases are costly and present single points of failure.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="font-bold text-lg mb-2 text-red-600">Privacy & Security</h3>
+          <p class="text-sm">Genomic data are sensitive; centralized systems risk breaches and unauthorized access.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="font-bold text-lg mb-2 text-red-600">Integrity & Traceability</h3>
+          <p class="text-sm">Ensuring data remain unaltered with transparent audit trails is challenging.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="font-bold text-lg mb-2 text-red-600">Data Silos & Interoperability</h3>
+          <p class="text-sm">Institutional silos hinder collaborative research and data aggregation.</p>
+        </div>
+      </div>
+    </section>
 
-<h3>2. Data Query Workflow</h3>
-<p id="workflow2-step">Step 1: A researcher defines a query to find genomic data matching specific criteria. The request is sent to the blockchain network for validation.</p>
-<button id="workflow2-next">Next</button>
+    <!-- Solution -->
+    <section id="solution" class="mb-16 md:mb-24 scroll-mt-20">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900">The Solution: An Interactive Architecture</h2>
+        <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">
+          Explore each component below to see how it contributes to a secure, scalable genomics platform.
+        </p>
+      </div>
+      <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+        <div id="architecture-diagram" class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12 text-center">
 
-<h2>Comparative Analysis</h2>
-<p>The table below compares our blockchain-based genomic data infrastructure with traditional centralized approaches, highlighting the key differences in features and capabilities.</p>
-<table>
-<thead>
-<tr>
-  <th>Feature</th>
-  <th>Traditional Centralized Approach</th>
-  <th>Blockchain-Based Approach</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Data Integrity</td>
-  <td>Data can be altered or lost if the central server is compromised.</td>
-  <td>Immutability ensures any change is permanently recorded; tampering is virtually impossible.</td>
-</tr>
-<tr>
-  <td>Security & Privacy</td>
-  <td>Sensitive data may be vulnerable if encryption and access controls fail.</td>
-  <td>Data is encrypted and access is governed by smart contracts; privacy is preserved through cryptographic protections.</td>
-</tr>
-<tr>
-  <td>Data Ownership & Control</td>
-  <td>Users often relinquish control when data is centralized in third-party systems.</td>
-  <td>Users retain ownership; they grant permissions via blockchain-managed consents.</td>
-</tr>
-<tr>
-  <td>Transparency & Auditability</td>
-  <td>Audit trails may be incomplete or restricted by the central authority.</td>
-  <td>All transactions (e.g., consents and access logs) are recorded on a distributed ledger, allowing transparent audits.</td>
-</tr>
-<tr>
-  <td>Decentralization</td>
-  <td>Single point of failure; dependent on one entity.</td>
-  <td>Distributed across multiple nodes; no single point of failure.</td>
-</tr>
-<tr>
-  <td>Interoperability</td>
-  <td>Data silos impede easy sharing between institutions.</td>
-  <td>Standardized protocols enable seamless data sharing across organizations while respecting privacy.</td>
-</tr>
-<tr>
-  <td>Consent Management</td>
-  <td>Often manual and static; difficult to enforce consistently.</td>
-  <td>Smart contracts automate enforcement of dynamic consent policies.</td>
-</tr>
-</tbody>
-</table>
+          <div data-target="desc-vectorization" class="architecture-box border-2 border-slate-300 p-4 rounded-lg">
+            <h4 class="font-bold text-teal-700">1. Data Vectorization</h4>
+            <p class="text-xs text-slate-500">Preprocessing</p>
+          </div>
 
-<h2>Key Benefits and Applications</h2>
-<p>Our genomic blockchain solution offers numerous benefits and supports diverse applications:</p>
-<ul>
-  <li><strong>Enhanced Data Security:</strong> By combining encryption with a tamper-proof ledger, sensitive genomic information is protected from unauthorized access and alterations.</li>
-  <li><strong>Improved Data Integrity:</strong> Cryptographic hashes ensure the provenance and authenticity of genomic datasets, which is crucial for reliable research outcomes.</li>
-  <li><strong>User Empowerment:</strong> Individuals retain control over their data, explicitly granting permissions to researchers while being able to revoke consent at any time.</li>
-  <li><strong>Streamlined Research Collaboration:</strong> Researchers can securely query large genomic datasets from multiple sources, accelerating studies in precision medicine.</li>
-  <li><strong>Regulatory Compliance:</strong> Automated consent tracking and immutable audit trails help meet privacy regulations (e.g., GDPR) by design.</li>
-  <li><strong>Applications in Healthcare:</strong> Enables personalized treatment plans, population genomics studies, drug discovery, and public health research.</li>
-  <li><strong>Applications in Biotech and Pharma:</strong> Supports companies in securely aggregating genomic data, improving R&D efficiency.</li>
-  <li><strong>Applications in Academia:</strong> Facilitates collaborative genomic research projects across institutions without compromising data ownership.</li>
-</ul>
+          <div data-target="desc-ipfs" class="architecture-box border-2 border-slate-300 p-4 rounded-lg">
+            <h4 class="font-bold text-teal-700">2. IPFS Storage</h4>
+            <p class="text-xs text-slate-500">Decentralized Storage</p>
+          </div>
 
-<h2>Conclusions and Future Perspectives</h2>
-<p>The integration of blockchain technology into genomic data management represents a transformative approach. It addresses critical challenges such as data security, privacy, and interoperability, while empowering individuals and researchers alike. The presented interactive architecture demonstrates how combining distributed ledgers, smart contracts, and robust encryption can create a trustworthy ecosystem for genomic research.</p>
-<p>Looking forward, future work will focus on optimizing performance for large-scale genomic datasets, integrating advanced privacy techniques (like zero-knowledge proofs), and ensuring compliance with evolving regulations. Continued development and open collaboration will be key to realizing the full potential of blockchain-enabled genomics. As the technology matures, we anticipate widespread adoption in clinical and research settings, ultimately accelerating medical breakthroughs and personalized healthcare.</p>
+          <div data-target="desc-polygon" class="architecture-box border-2 border-slate-300 p-4 rounded-lg">
+            <h4 class="font-bold text-teal-700">3. Polygon Blockchain</h4>
+            <p class="text-xs text-slate-500">Control Layer</p>
+          </div>
 
-<h2>GitHub</h2>
-<p>The full source code and implementation details of this genomic blockchain infrastructure are available on GitHub. Developers and researchers can explore the repository to review the design, contribute enhancements, and deploy the platform. <a href="https://github.com/magieuregio/kmer-embedding-demo.git">Visit our GitHub repository</a> for code, documentation, and examples.</p>
+          <div data-target="desc-nft" class="architecture-box border-2 border-slate-300 p-4 rounded-lg">
+            <h4 class="font-bold text-indigo-700">4. NFT & MAG Token</h4>
+            <p class="text-xs text-slate-500">Access Control</p>
+          </div>
 
-<script>
-  // Interactive architecture component descriptions
-  document.querySelectorAll('#arch-components li').forEach(function(item) {
-    item.addEventListener('click', function() {
-      var desc = this.getAttribute('data-desc');
-      document.getElementById('arch-desc').innerHTML = desc;
-    });
-  });
+          <div data-target="desc-web3ui" class="architecture-box border-2 border-slate-300 p-4 rounded-lg">
+            <h4 class="font-bold text-indigo-700">5. Web3 Interface</h4>
+            <p class="text-xs text-slate-500">User Access</p>
+          </div>
 
-  // Data Submission Workflow (interactive steps)
-  (function() {
-    var steps = [
-      "Step 2: The data is encrypted by the Encryption Module before leaving the user's device.",
-      "Step 3: Encrypted data and consent parameters are sent to secure off-chain storage, while a hash and metadata are recorded on the blockchain.",
-      "Step 4: A smart contract logs the data registration transaction, linking the data hash with the user's pseudonymous identity and consent policy.",
-      "Step 5: The system confirms successful registration and notifies the user, completing the submission process."
-    ];
-    var current = 0;
-    document.getElementById('workflow1-next').addEventListener('click', function() {
-      if (current < steps.length) {
-        document.getElementById('workflow1-step').innerText = steps[current];
-        current++;
-        if (current === steps.length) {
-          this.disabled = true;
-        }
+          <div data-target="desc-analysis" class="architecture-box border-2 border-slate-300 p-4 rounded-lg">
+            <h4 class="font-bold text-indigo-700">6. Analysis Tools</h4>
+            <p class="text-xs text-slate-500">Python/ML Suite</p>
+          </div>
+
+        </div>
+
+        <div id="architecture-descriptions" class="mt-8 pt-6 border-t border-slate-200 text-slate-700">
+          <div id="desc-default" class="text-center text-slate-500">Select a component to view details.</div>
+
+          <div id="desc-vectorization" class="hidden architecture-desc text-left text-sm">
+            <h3 class="font-bold text-lg mb-2">Genomic Data Vectorization</h3>
+            <p>Raw genomic files (VCF, FASTQ) are large. Vectorization transforms sequences into numerical embeddings, reducing size and enabling ML workflows.</p>
+          </div>
+          <div id="desc-ipfs" class="hidden architecture-desc text-left text-sm">
+            <h3 class="font-bold text-lg mb-2">Decentralized Storage: IPFS</h3>
+            <p>IPFS content-based CIDs guarantee integrity. Pinning maintains availability, avoiding single points of failure.</p>
+          </div>
+          <div id="desc-polygon" class="hidden architecture-desc text-left text-sm">
+            <h3 class="font-bold text-lg mb-2">Layer 2 Blockchain: Polygon</h3>
+            <p>Polygon testnet offers fast, low-cost transactions and EVM compatibility for Solidity smart contracts.</p>
+          </div>
+          <div id="desc-nft" class="hidden architecture-desc text-left text-sm">
+            <h3 class="font-bold text-lg mb-2">Access Control: NFTs & MAG Token</h3>
+            <p>ERC-1155 NFTs represent dataset access rights; MAG ERC-20 tokens (free via faucet) enable claims. Ownership proves access on-chain.</p>
+          </div>
+          <div id="desc-web3ui" class="hidden architecture-desc text-left text-sm">
+            <h3 class="font-bold text-lg mb-2">Web3 User Interface</h3>
+            <p>A React/Ethers.js UI connects wallets, lets users claim MAG, mint NFTs, and fetch IPFS CIDs for data download.</p>
+          </div>
+          <div id="desc-analysis" class="hidden architecture-desc text-left text-sm">
+            <h3 class="font-bold text-lg mb-2">Analysis Tools Integration</h3>
+            <p>Vectorized IPFS data load into Python with BioPython, NumPy, scikit-learn, and TensorFlow for bioinformatics and ML.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflows -->
+    <section id="workflows" class="mb-16 md:mb-24 scroll-mt-20">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Interactive Workflows</h2>
+        <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">Explore key processes step by step.</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <h3 class="font-bold text-xl mb-4 text-center">Workflow 1: Vectorization & Storage</h3>
+          <div id="storage-flow" class="space-y-2">
+            <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="1"><strong>Step 1:</strong> Raw Genomic Data (VCF, FASTQ)</div>
+            <div class="text-center text-gray-400">↓</div>
+            <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="2"><strong>Step 2:</strong> Vectorization Algorithms (e.g., k-mer)</div>
+            <div class="text-center text-gray-400">↓</div>
+            <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="3"><strong>Step 3:</strong> Vectorized Data (NumPy arrays)</div>
+            <div class="text-center text-gray-400">↓</div>
+            <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="4"><strong>Step 4:</strong> Upload to IPFS Node</div>
+            <div class="text-center text-gray-400">↓</div>
+            <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="5"><strong>Step 5:</strong> Obtain Content Identifier (CID)</div>
+            <div class="text-center text-gray-400">↓</div>
+            <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="6"><strong>Step 6:</strong> Pinning for Persistence</div>
+          </div>
+          <div id="storage-flow-desc" class="mt-4 p-4 bg-slate-100 rounded-md text-sm text-slate-700 min-h-[50px]">Start at Step 1.</div>
+          <div class="flex justify-center mt-4 space-x-4">
+            <button id="storage-prev" class="px-4 py-2 bg-slate-200 rounded-md text-sm font-semibold hover:bg-slate-300 disabled:opacity-50" disabled>Previous</button>
+            <button id="storage-next" class="px-4 py-2 bg-blue-500 text-white rounded-md text-sm font-semibold hover:bg-blue-600">Next</button>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg">
+          <h3 class="font-bold text-xl mb-4 text-center">Workflow 2: User Interaction</h3>
+          <div id="user-flow" class="space-y-2">
+            <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="1"><strong>Step 1:</strong> Admin mints NFT tied to CID</div>
+            <div class="text-center text-gray-400">↓</div>
+            <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="2"><strong>Step 2:</strong> User requests free MAG tokens</div>
+            <div class="text-center text-gray-400">↓</div>
+            <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="3"><strong>Step 3:</strong> User claims NFT with MAG</div>
+            <div class="text-center text-gray-400">↓</div>
+            <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="4"><strong>Step 4:</strong> User requests data via NFT</div>
+            <div class="text-center text-gray-400">↓</div>
+            <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="5"><strong>Step 5:</strong> Smart contract verifies ownership</div>
+            <div class="text-center text-gray-400">↓</div>
+            <div class="flow-step p-3 border-2 border-gray-300 rounded-md" data-step="6"><strong>Step 6:</strong> Events recorded for audit trail</div>
+          </div>
+          <div id="user-flow-desc" class="mt-4 p-4 bg-slate-100 rounded-md text-sm text-slate-700 min-h-[50px]">Start at Step 1.</div>
+          <div class="flex justify-center mt-4 space-x-4">
+            <button id="user-prev" class="px-4 py-2 bg-slate-200 rounded-md text-sm font-semibold hover:bg-slate-300 disabled:opacity-50" disabled>Previous</button>
+            <button id="user-next" class="px-4 py-2 bg-blue-500 text-white rounded-md text-sm font-semibold hover:bg-blue-600">Next</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Comparison -->
+    <section id="comparison" class="mb-16 md:mb-24 scroll-mt-20">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Comparative Analysis</h2>
+        <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">This table compares our blockchain-based genomics infrastructure against traditional and other blockchain approaches.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="table-container overflow-x-auto">
+          <table class="w-full text-sm text-left">
+            <thead class="bg-slate-100 text-slate-600 uppercase">
+              <tr>
+                <th class="px-6 py-3">Feature</th>
+                <th class="px-6 py-3">Traditional Centralized</th>
+                <th class="px-6 py-3">Other Blockchain Projects</th>
+                <th class="px-6 py-3 font-bold text-blue-600">Proposed Infrastructure</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              <tr class="hover:bg-slate-50">
+                <td class="px-6 py-4 font-medium">Storage Model</td>
+                <td class="px-6 py-4">Central servers/databases</td>
+                <td class="px-6 py-4">Off-chain storage with on-chain hashes</td>
+                <td class="px-6 py-4 font-medium">Vectorized data on IPFS; CIDs linked via NFTs on Polygon L2</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="px-6 py-4 font-medium">Access Control</td>
+                <td class="px-6 py-4">User accounts/passwords/RBAC</td>
+                <td class="px-6 py-4">Token-gated smart contracts</td>
+                <td class="px-6 py-4 font-medium">Multi-NFT (ERC-1155) and free MAG token; on-chain verification</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="px-6 py-4 font-medium">Traceability</td>
+                <td class="px-6 py-4">Mutable centralized logs</td>
+                <td class="px-6 py-4">Immutable audit on blockchain</td>
+                <td class="px-6 py-4 font-medium">Transparent event logging on Polygon</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="px-6 py-4 font-medium">Data Integrity</td>
+                <td class="px-6 py-4">Database backups and checks</td>
+                <td class="px-6 py-4">On-chain hashes ensure integrity</td>
+                <td class="px-6 py-4 font-medium">Content-based IPFS addressing prevents tampering</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="px-6 py-4 font-medium">User Costs</td>
+                <td class="px-6 py-4">Licensing and hosting fees</td>
+                <td class="px-6 py-4">High L1 gas fees</td>
+                <td class="px-6 py-4 font-medium">Free testnet MAG/NFT; low-cost IPFS storage</td>
+              </tr>
+              <tr class="hover:bg-slate-50">
+                <td class="px-6 py-4 font-medium">Interoperability</td>
+                <td class="px-6 py-4">Data silos impede sharing</td>
+                <td class="px-6 py-4">Varying APIs</td>
+                <td class="px-6 py-4 font-medium">Standardized protocols enabling secure sharing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="advantages" class="mb-16 md:mb-24 scroll-mt-20">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Key Benefits & Applications</h2>
+        <p class="mt-4 max-w-3xl mx-auto text-lg text-slate-600">Our solution supports FAIR principles and drives innovation across research and industry.</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-bold text-xl mb-4">Core Strengths</h3>
+          <ul class="space-y-4">
+            <li class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold text-blue-700">Data Vectorization</h4>
+              <p class="text-sm text-slate-600">Enables efficient decentralized storage and immediate ML/AI application.</p>
+            </li>
+            <li class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold text-blue-700">Polygon L2 & ERC-1155</h4>
+              <p class="text-sm text-slate-600">Scalable Layer 2 with granular multi-NFT access control.</p>
+            </li>
+            <li class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold text-blue-700">Free Utility Token (MAG)</h4>
+              <p class="text-sm text-slate-600">Eliminates financial barriers; facilitates NFT claims.</p>
+            </li>
+            <li class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold text-blue-700">FAIR Data Principles</h4>
+              <p class="text-sm text-slate-600">Findable, Accessible, Interoperable, Reusable in a decentralized context.</p>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-xl mb-4">Potential Applications</h3>
+          <ul class="space-y-4">
+            <li class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold text-green-700">Secure Collaborative Research</h4>
+              <p class="text-sm text-slate-600">Multi-institution data sharing with verifiable controls.</p>
+            </li>
+            <li class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold text-green-700">Decentralized Data Commons</h4>
+              <p class="text-sm text-slate-600">Community-governed repositories preserving contributor rights.</p>
+            </li>
+            <li class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold text-green-700">Data Sovereignty</h4>
+              <p class="text-sm text-slate-600">Individuals control granular data access for researchers/clinicians.</p>
+            </li>
+            <li class="bg-white p-4 rounded-lg shadow-sm">
+              <h4 class="font-semibold text-green-700">Verifiable Clinical Trials</h4>
+              <p class="text-sm text-slate-600">Transparent management of genomic data in trials.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section id="conclusion" class="scroll-mt-20">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Conclusions & Future Perspectives</h2>
+      </div>
+      <div class="bg-white p-8 rounded-xl shadow-lg">
+        <p class="text-slate-700 leading-relaxed mb-6">
+          We introduced an innovative blockchain-based infrastructure for secure storage and controlled access to genomic data. Combining vectorization, IPFS, and multi-NFT controls on Polygon, we achieved enhanced data integrity, traceability, and usability via Python integration. This model can guide global genomic research, promoting ethical, collaborative discovery.
+        </p>
+        <div class="pt-6 border-t border-slate-200">
+          <h4 class="font-bold text-lg mb-3">Future Work</h4>
+          <ul class="list-disc list-inside text-slate-600 space-y-2 text-sm">
+            <li><strong>Mainnet Migration:</strong> Deploy on Polygon mainnet after rigorous security audits.</li>
+            <li><strong>Advanced Privacy:</strong> Integrate zero-knowledge proofs and homomorphic encryption.</li>
+            <li><strong>Governance Models:</strong> Develop frameworks for real-world implementations.</li>
+            <li><strong>Token Utility Expansion:</strong> Explore MAG for decentralized governance and staking.</li>
+          </ul>
+          <div class="mt-6 text-center">
+            <a href="https://github.com/MaggiGroup/GenomicBlockchainInfra_SmartContracts_V1" target="_blank" rel="noopener noreferrer" class="inline-block bg-slate-800 text-white font-bold text-sm px-6 py-3 rounded-lg hover:bg-slate-900 transition-colors">
+              View Smart Contracts (GitHub)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Interactive Architecture
+      const boxes = document.querySelectorAll('.architecture-box');
+      const descDefault = document.getElementById('desc-default');
+      const descs = document.querySelectorAll('.architecture-desc');
+      boxes.forEach(box => {
+        box.addEventListener('click', () => {
+          const id = box.getAttribute('data-target');
+          descs.forEach(d => d.classList.add('hidden'));
+          descDefault.classList.add('hidden');
+          document.getElementById(id).classList.remove('hidden');
+        });
+      });
+
+      // Workflows
+      function setupFlow(flowId, steps) {
+        const descEl = document.getElementById(flowId + '-desc');
+        const nextBtn = document.getElementById(flowId + '-next');
+        const prevBtn = document.getElementById(flowId + '-prev');
+        let idx = 0;
+        descEl.textContent = steps[0];
+        nextBtn.addEventListener('click', () => {
+          if (idx < steps.length - 1) { idx++; descEl.textContent = steps[idx]; prevBtn.disabled = false; }
+          if (idx === steps.length - 1) nextBtn.disabled = true;
+        });
+        prevBtn.addEventListener('click', () => {
+          if (idx > 0) { idx--; descEl.textContent = steps[idx]; nextBtn.disabled = false; }
+          if (idx === 0) prevBtn.disabled = true;
+        });
       }
+      setupFlow('storage-flow', [
+        'The process starts with raw genomic data files (VCF, FASTQ).',
+        'Data is processed using vectorization algorithms (e.g., k-mer) to convert sequences into numerical embeddings.',
+        'The resulting embeddings (NumPy arrays) are ready for efficient storage and computation.',
+        'Embeddings are uploaded to an IPFS node.',
+        'IPFS generates a unique Content Identifier (CID).',
+        'The data is pinned for long-term persistence, making the CID ready for NFT linkage.'
+      ]);
+      setupFlow('user-flow', [
+        'An authorized admin mints an NFT on-chain, linking it to the IPFS CID.',
+        'A user requests free MAG tokens from a faucet to their wallet.',
+        'The user uses MAG tokens to claim the NFT granting data access.',
+        'The user requests data access via the NFT, invoking the smart contract.',
+        'The smart contract verifies NFT ownership and returns the CID.',
+        'Access events are emitted on-chain, creating an immutable audit trail.'
+      ]);
     });
-  })();
-
-  // Data Query Workflow (interactive steps)
-  (function() {
-    var steps = [
-      "Step 2: The blockchain network searches indexed data hashes and verifies consent conditions via smart contracts.",
-      "Step 3: If consent allows, the system grants the researcher access to decrypt and download the encrypted genomic data from secure storage.",
-      "Step 4: All access events are recorded on-chain for auditability and transparency.",
-      "Step 5: The researcher analyzes the retrieved data, confident in the integrity and provenance provided by the blockchain system."
-    ];
-    var current = 0;
-    document.getElementById('workflow2-next').addEventListener('click', function() {
-      if (current < steps.length) {
-        document.getElementById('workflow2-step').innerText = steps[current];
-        current++;
-        if (current === steps.length) {
-          this.disabled = true;
-        }
-      }
-    });
-  })();
-</script>
+  </script>
 
 </body>
 </html>
